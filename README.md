@@ -5,4 +5,4 @@ An Initial Public Offering (IPO) is the first sale of stocks issued by a company
 
 What are the most reliable and effective predictors that can be used to predict the success of an IPO? Potential predictors include industries/sectors, locations, the number of years the company had been operating before going IPO, which day of the week the stock went public on. 
 
-This is important as an IPO is one of the most important factors in the success of a Public Company, and the ability to find the most important factors in its success is immensely valuable. This project will be worthwhile owing to the previously mentioned importance of IPOs and the value that such a project could unlock. We believe that we will succeed owing to us possessing a sufficient amount of applicable data and identifiable features that would allow us to explore practical and viable solutions through various models.
+
