@@ -12,14 +12,12 @@ The dataset we collected is from Kaggle, which is called Stocks IPO Information 
   (1) The date the company went public <br/>
   
   (2) Price data since the IPO, including: <br/>
-  
      - Opening price of each day from day 1 - day 261 <br/>
      - Closing price of each day from day 1 - day 261 <br/>
      - Volume of each day from day 1 - day 261 <br/>
      - The number of days the stock outperformed the S&P 500 <br/>
      
   (3) Each company’s financials and operations pre-IPO, including: <br/>
-  
      - Net income of the company 1 year after the IPO <br/>
      - The industry/sector the company is in <br/>
      - The number of company’ employees <br/>
