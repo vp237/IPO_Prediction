@@ -6,7 +6,9 @@ For this project, we are looking to answer the following question: What is the m
 ### 2. Dataset Description:
 The link to the data set:<br/> 
        [Stocks IPO Information and Results](https://www.kaggle.com/proselotis/financial-ipo-data)<br/>  
+       
 The dataset we collected is from Kaggle, which is called Stocks IPO Information and Results. The dataset contains data for 3762 different stock tickers, with parameters including:<br/>
+
   (1) The date the company went public <br/>
   (2) Price data since the IPO, including: <br/>
      - Opening price of each day from day 1 - day 261 <br/>
