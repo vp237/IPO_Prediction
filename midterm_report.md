@@ -59,7 +59,7 @@ Linear Regression was first attempted to predict a continuous value for the pric
 
 For feature engineering, we chose to transform several nominal features. Since CEOGender, PresidentGender, Industry and Sector are categorical data, we used one-hot-encoding in order to include them in the linear model. Our resulting matrix therefore included 1147 rows and 141 columns.
 
-Initial running of the linear regression model resulted in an r<sup>2</sup> value of -14.593315328876882 and the graph below.
+Initial running of the linear regression model resulted in an R<sup>2</sup> value of -14.593315328876882 and the graph below.
 
 Figure 1: Linear Regression Model
 [![P5.jpg](https://i.postimg.cc/Jz5TMM94/P5.jpg)](https://postimg.cc/w135k8qS)
