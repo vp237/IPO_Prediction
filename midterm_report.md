@@ -74,7 +74,7 @@ From the results above, it can be interpreted that regression might be too chall
 
 According to a research paper that was trying to predict the failures of IPO, random forest regression might perform better compared to linear regression in terms of predicting the closing price of the first day. We performed random forest regression with feature engineering with a very similar approach to linear regression. The initial run had an r<sup>2</sup> value of 0.8932314188939517, which looked very promising on paper. 
 
-Figure2: Random Forest Model
+Figure 2: Random Forest Model
 [![random-forest.png](https://i.postimg.cc/rFQCCHBX/random-forest.png)](https://postimg.cc/w7Rm9wx0)
 
 However, after running 5-fold cross validation, we got r<sup>2</sup> values of [0.9999999975038855, -31.79573939717596, 0.9966313772775831, -15.481289453448529,  0.10929519824082756]. Results were therefore similar to the linear regression case. 
