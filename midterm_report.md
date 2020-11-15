@@ -13,7 +13,7 @@ This figure shows the statistics of the closing prices over day ranges 0-261 for
 
 [![P2.jpg](https://i.postimg.cc/3wYTc8sC/P2.jpg)](https://postimg.cc/yDQtJHYk)
 
-This histogram of the YearDifference shows the frequency of the number of years the company was private before appearing in the IPO. We can see that most were private for only a small number of years, mainly 0, before appearing in the IPO. There are few that remained public for a large number of years before appearing in the IPO. 
+This histogram of the YearDifference shows the frequency of the number of years the company was private before appearing in the IPO. We can see that most were private for only a small number of years, mainly 0, before appearing in the IPO. There are few that remained public for a large number of years before going IPO. 
 
 [![P4.jpg](https://i.postimg.cc/Qxv55P2r/P4.jpg)](https://postimg.cc/7fMfrBPB)
 
