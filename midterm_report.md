@@ -34,10 +34,12 @@ The IPO dataset consists of 3762 rows and 1664 columns. Each row corresponds to 
 - Age and gender of the CEO 
 - Age and gender of the president
 - Stock price data from day 0 to day 261
+- Financial data of the company after it went IPO
 <!-- list end-->
 Additionally, the dataset had to be cleaned to remove missing values.
 <ol> 
-<li> We first dropped all rows that contained blank values. </li>
+<li> We first dropped all the columns that contain the financial data of the company post-IPO (which accounted for a large proportion of the dataset) because they would be unusable since we were trying to predict the company's stock price pre-IPO.
+<li> We then dropped all rows that contained blank values. </li>
 <li> Afterwards, we removed rows that contained unknown as the value for CEO/president gender. </li>
 <li> Then, we dropped rows that had '-' as the value for number of employees. </li>
 <li> Finally, we removed negative values from the YearDifference column. </li>
