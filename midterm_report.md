@@ -45,7 +45,7 @@ Additionally, the dataset had to be cleaned to remove missing values.
 <li> Finally, we removed negative values from the YearDifference column. </li>
 </ol>
 
-After cleaning, we were left with 1147 rows and 279 columns.      
+After cleaning, we were left with 1147 rows and 279 columns, which we considered sufficient amount of data to work on. We think it might not be wise to impute missing data in this situation because there is a great deal of randomness in the movement of the stock price and even though the stock price's movement of each company may be dependent on each other, the stock price itself is not.     
 
 ### **4. Model Effectiveness**
 
