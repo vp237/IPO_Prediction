@@ -38,8 +38,8 @@ Each row of the IPO dataset corresponds to a different company. Columns contain 
 <!-- list end-->
 Additionally, the dataset had to be cleaned to remove missing values.
 <ol> 
-<li> We first dropped all the columns that contain the financial data of the company post-IPO (which accounted for a large proportion of the dataset) because they would be unusable since we were trying to predict the company's stock price pre-IPO.
-<li> We then dropped all rows that contained blank values. </li>
+<li> We first dropped the columns that contain the financial data of the company post-IPO (which accounted for a large proportion of the dataset) because they would be unusable since we were trying to predict the company's stock price pre-IPO.
+<li> We then dropped rows that contained blank values. </li>
 <li> Afterwards, we removed rows that contained unknown as the value for CEO/president gender. </li>
 <li> Then, we dropped rows that had '-' as the value for number of employees. </li>
 <li> Finally, we removed negative values from the YearDifference column. </li>
