@@ -23,7 +23,7 @@ This is a histogram of the sectors that each company belongs to. There is a good
 
 ### **3. Data Cleaning:**
 
-The IPO dataset consists of 3762 rows and 1664 columns. Each row corresponds to a different company. Columns contain publically available information about each company including: 
+Each row of the IPO dataset corresponds to a different company. Columns contain publically available information about each company including: 
 - Ticker symbol 
 - Day, month and year of IPO 
 - Year the company was founded 
@@ -45,7 +45,7 @@ Additionally, the dataset had to be cleaned to remove missing values.
 <li> Finally, we removed negative values from the YearDifference column. </li>
 </ol>
 
-After cleaning, we were left with 1147 rows and 279 columns, which we considered a sufficient amount of data to work on. We thought it might not be wise to impute missing data in this situation because there is a great deal of randomness in the movement of the stock price and even though the stock price's movement of each company may be dependent on each other, the stock price itself is not, making it very difficult to impute missing values in the most accurate manner possible.     
+After cleaning, we had 1147 rows and 279 columns, which we considered a sufficient amount of data to work on. We thought it might not be wise to impute missing data in this situation because there is a great deal of randomness in the movement of the stock price and even though the stock price's movement of each company may be dependent on each other, the stock price itself is not, making it very difficult to impute missing values in the most accurate manner possible.     
 
 ### **4. Model Effectiveness**
 
