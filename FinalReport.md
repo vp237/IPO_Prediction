@@ -74,7 +74,7 @@ A new dataframe was thus created with the predictions and actual values, as well
 
 ### b) <ins>Random Forest</ins>
 
-According to a research paper that was trying to predict the failures of IPO, random forest regression might perform better compared to linear regression in terms of predicting the closing price of the first day. We performed random forest regression with feature engineering with a very similar approach to linear regression. As for our parameters, we chose n_estimators (the number of trees in the forest) of 1000 and random_state of 42. However, the initial run had an MAE value of 49.10111234383177, which was a very good result compared to linear regression.
+According to a research paper that was trying to predict the failures of IPO, random forest regression might perform better compared to linear regression in terms of predicting the closing price of the first day. We performed random forest regression with feature engineering with a very similar approach to linear regression. As for our parameters, we chose n_estimators (the number of trees in the forest) of 1000 and random_state of 42. The initial run had an MAE value of 49.10111234383177, which was a very good result compared to linear regression.
 
 [![download-1.png](https://i.postimg.cc/8kLtFYLn/download-1.png)](https://postimg.cc/F1sj8DWj)
 
