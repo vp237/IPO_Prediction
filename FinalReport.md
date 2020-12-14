@@ -36,7 +36,23 @@ The IPO dataset consists of 3762 rows and 1664 columns. Each row corresponds to 
 - Financial data of the company after it went IPO
 <!-- list end-->
 
-### **3. Data Cleaning:**
+### **3. Data Descriptive Statistics and Visualizations:**
+
+[![P1.jpg](https://i.postimg.cc/GpCLnJyD/P1.jpg)](https://postimg.cc/FYT5jSGF)
+
+This figure shows the statistics of the closing prices over day ranges 0-261 for each company (shown for companies 0-4). From the description of the data above, we can see that some companies have prices that fluctuate with wide ranges. For example, company 16 has a standard deviation of 7003.72 while company 3729 has a standard deviation of 2.224712 * 10<sup>-14</sup>, nearly 0. Every company has different trends in their closing prices in the IPO. Here is a visual representation of their varying closing prices:
+
+[![P2.jpg](https://i.postimg.cc/3wYTc8sC/P2.jpg)](https://postimg.cc/yDQtJHYk)
+
+This histogram of the YearDifference shows the frequency of the number of years the company was private before appearing in the IPO. We can see that most were private for only a small number of years, mainly 0, before appearing in the IPO. There are few that remained public for a large number of years before going IPO. 
+
+[![P4.jpg](https://i.postimg.cc/Qxv55P2r/P4.jpg)](https://postimg.cc/7fMfrBPB)
+
+This is a histogram of the sectors that each company belongs to. There is a good variety of them all but the market is dominated by finance, healthcare and consumer services sector.  
+
+[![P3.jpg](https://i.postimg.cc/pr2Cw72S/P3.jpg)](https://postimg.cc/qh52n16c)
+
+### **4. Data Cleaning:**
 Below is our process of cleaning the dataset:
 <ol> 
 <li> We first dropped all the columns that contain the financial data of the company post-IPO (which accounted for a large proportion of the dataset) because they would be unusable since we were trying to predict the company's stock price pre-IPO.
@@ -45,7 +61,7 @@ Below is our process of cleaning the dataset:
 <li> Finally, we removed negative values from the YearDifference column because those data did not make sense since the company could not go IPO before it was founded. </li>
 </ol>
 
-### **4. Feature Selection:**
+### **5. Feature Selection:**
 
 The features used were ‘Month’, ‘Day'’, ‘dayOfWeek’, ‘yearDifference’, 'employees', ‘CEOAge’, ‘PresidentAge’, ‘openDay0’, ‘CEOGender’, ‘PresidentGender’, ‘Industry’ and ‘Sector’. We chose these features because they were the only information that was available to the public pre-IPO. According to an expert we consulted, IPO's stock price could be very cyclical, hence we chose to include features such as ‘Month’, ‘Day'’, ‘dayOfWeek’. We reckoned that investors might be interested in the size of the company, which could be reflected from the number of employees. We also thought that investors would be more eager to invest in the company if they knew that the company's CEO and President were of old age, which might indicate how experienced the management team was and how long they had been in the field. We thought that the CEO and President's genders might also be important since until the present day, women leaders are still not as highly regarded as male leaders. The industry and sector would also be crucial in predicting the stock price because investors would tend to be more bullish to some industries and sectors than others. Finally, the market might show a keener interest in companies that had been around for while before going IPO because there would be more information about the company on the news compared to newly founded startups, hence we chose ‘yearDifference’ as one of our features. Below is a coefficient matrix for ordinal and continuous features after we imputed missing values. 
 
@@ -53,7 +69,7 @@ The features used were ‘Month’, ‘Day'’, ‘dayOfWeek’, ‘yearDifferen
 
 Figure 1: Correlation Matrix
 
-### **5. Models Used:**
+### **6. Models Used:**
 
 For feature engineering, we chose to transform several nominal features. Since CEOGender, PresidentGender, Industry and Sector are categorical data, we used one-hot-encoding in order to include them in the linear model.
 
@@ -105,7 +121,7 @@ In order to further explore the classification problem, we decided to run SVM. S
 
 Finally, we also used Logistic Regression. The logistic model had a misclassification rate of 0.20593692022263452 and a balanced accuracy score of 0.49998925839993125 for initial run. 
 
-### **6. Testing for Model Effectiveness and Cross Validation**
+### **7. Testing for Model Effectiveness and Cross Validation**
 
 Testing for efficiency and avoiding underfitting/overfitting: For the classification models, we used misclassification rate and balanced accuracy score as a means to test for our model's effectiveness. We chose to use balanced accuracy score here because our classes were imbalanced: for most of our data (around 80% of the stocks), the stock price increased after the first day. Balanced accuracy is a metric that one can use when evaluating how good a binary classifier is, especially when the classes are imbalanced, i.e. one of the two classes appears a lot more often than the other. Balanced accuracy is based on two more commonly used metrics: sensitivity (also known as true positive rate or recall) and specificity (also known as true negative rate, or 1 – false positive rate) and is calculated by taking the mean of the two. For the continuous-value prediction models, we used Mean Absolute Error (MAE) as a means to test for our model's effectiveness when predicting continous values, and misclassification rate and balanced accuracy score after we changed our problem into a classification problem. 
 
@@ -124,7 +140,7 @@ Five fold cross validation was performed in order to prevent overfitting. The re
 
 As can be observed from the above, the model that performed best for predicting continuous values was Ridge Regression, as average MAE was lowest. However, for the classification problem, the best performing model was Random Forest, with an average misclassification rate of 0.2093. From our MAEs, we could see that the discrepancy between the predicted values and the actual values varied greatly among the folds, which reflected the random nature of stock price and further reinforced that we should not use our models to predict continuous values. It should also be noted that even though most of our models performed better than chance (with misclassification rates lower than 50%), our balanced accuracy scores across all models were not too decent, only hovering around 0.5, which could be explained by the imbalance nature of the classes in our dataset.
 
-### **7. Trading Strategy:**
+### **8. Trading Strategy:**
 
 Since we are risk-averse investors, we chose to pick 10 stocks with the lowest predicted increase/decrease according to our continuous-value prediction model with the lowest misclassification rate, which was the random forest model. We would only be buying and selling these 10 stocks from the beginning until the end of the 262 days. Because of the limited data we had, one assumption we were making was that by the time we start trading these stocks, it would be their first day going IPO. We would also ignore the transaction costs. We would allocate equal amount of money to each stock and we would be employing a simple long-short market neutral trading strategy as follows:
 
@@ -154,7 +170,7 @@ This is the statistics of our portfolio's performance, which does not look too b
 
 Figure 7: Statistics of Portfolio's Log Returns 
 
-### **8. Discussion on Weapon of Math Destruction and Fairness:**
+### **9. Discussion on Weapon of Math Destruction and Fairness:**
 
 ### a) <ins>Discussion on Weapon of Math Destruction</ins>
 
