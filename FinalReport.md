@@ -18,7 +18,7 @@ b) For classification prediction:
 
 These 5 models would help us answer the following questions: How should we approach the problem of IPO Success Prediction? How successful can we be if we try to predict real value increases/decreases? In other words, on our best continuous-value prediction model, how far off are our predictions from the true increases/decreases? Should we use continuous-value prediction models but turn them into classification problems instead, or will traditional classification models help achieve lower misclassification rates?
 
-As our final stretch, we did not want to waste the price data for the whole year, so we would be using the data for our simple trading strategy. In the end, we would check to see how well we did after 262 days of trading.
+As our final stretch, we did not want to waste the price data for the whole year and we also took inspiration from the 4741 Trend Trade Project. We would be using the data for our simple trading strategy. In the end, we would check to see how well we did after 262 days of trading.
 
 ### **2. The Dataset:**
 
@@ -39,9 +39,9 @@ The IPO dataset consists of 3762 rows and 1664 columns. Each row corresponds to 
 Below is our process of cleaning the dataset:
 <ol> 
 <li> We first dropped all the columns that contain the financial data of the company post-IPO (which accounted for a large proportion of the dataset) because they would be unusable since we were trying to predict the company's stock price pre-IPO.
-<li> In order to get the most out of our data, we decided to impute missing values using Gaussian Copula for the columns that were of ordinal types, namely: Year, Month, Day, dayOfWeek, yearDifference, USACompany, YearFounded, CEOAge, CEOGender, PresidentAge, PresidentGender. 
+<li> Missing value imputation technique: In order to get the most out of our data, we decided to impute missing values using Gaussian Copula for the columns that were of ordinal types, namely: Year, Month, Day, dayOfWeek, yearDifference, USACompany, YearFounded, CEOAge, CEOGender, PresidentAge, PresidentGender. 
 <li> We then dropped all rows that contained blank values for the other columns. </li>
-<li> Finally, we removed negative values from the YearDifference column. </li>
+<li> Finally, we removed negative values from the YearDifference column because those data did not make sense. </li>
 </ol>
 
 ### **4. Feature Selection:**
