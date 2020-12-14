@@ -100,7 +100,7 @@ In order to further explore the classification problem, we decided to run SVM. S
 
 Finally, we also used Logistic Regression. The logistic model had a misclassification rate of 0.20593692022263452 and a balanced accuracy score of 0.49998925839993125. 
 
-### **5. Testing for Model Effectiveness and Cross Validation**
+### **6. Testing for Model Effectiveness and Cross Validation**
 
 Testing for efficiency and avoiding underfitting/overfitting: For the classification models, we used misclassification rate and balanced accuracy score as a means to test for our model's effectiveness. We chose to use balanced accuracy score here because our classes are imbalanced: for most of our data (around 80% of the stocks), the stock price increased after the first day. For the continuous-value prediction models, we used Mean Absolute Error (MAE) as a means to test for our model's effectiveness when predicting continous values, and misclassification rate and balanced accuracy score after we changed our problem into a classification problem. 
 
@@ -119,7 +119,7 @@ Five fold cross validation was performed in order to prevent overfitting. The re
 
 As can be observed from the above, the model that performed best for predicting continuous values was Ridge Regression, as MAE was lowest. However, for the classification problem, the best performing model was Random Forest, with a misclassification rate of 0.2093.
 
-### **6. Trading Strategy:**
+### **7. Trading Strategy:**
 
 Since we are risk-averse investors, we chose to pick 10 stocks with the lowest predicted increase/decrease according to our best real-value prediction model with the lowest misclassification rate, which was the random forest model. We would only be buying and selling these 10 stocks from the beginning till the end of the 262 days. Because of the limited data we have, one assumption we were making is that by the time we start trading these stocks, it would be their first day going IPO. We will allocate equal amount of money to each stock and we would be employing a simple long-short market neutral trading strategy as follows:
 
@@ -149,7 +149,7 @@ This is the statistics of our portfolio's performance, which does not look too b
 
 Figure 7: Statistics of Portfolio's Log Returns
 
-### **7. Discussion on Weapon of Math Destruction and Fairness:**
+### **8. Discussion on Weapon of Math Destruction and Fairness:**
 
 ### a) <ins>Discussion on Weapon of Math Destruction</ins>
 
@@ -159,11 +159,11 @@ There is an important consideration for our model and its pertinence to being a 
 
 The issue of fairness was a concerning factor in our creation of the models. Owing to the complex and byzantine factors that are actually conducive to successful IPOs, which remain inaccessible and unknown to us, we can only utilize more tangible and direct features and elements from which to draw our features from. An initial consideration of our model was to remove the gender and age of the CEO from our model to protect it from bias, but having learned that the far-reaching effects of these sensitive factors would remain prevalent in our model spread amongst the other features in a labyrinthine fashion that would be immune to our understanding, it was decided that for a more faithful and accurate model we would leave such sensitive factors in. Our best performing model for misclassification problem, which is random forest, is based on a black-box method, so there is much difficulty in ascertaining the true effects of such bias on our results, which is understandable owing to the nebulous nature of stock evaluation. In this case, our model is indeed an unfair model. Should sensitive inputs and features be changed, the result would be affected in a significant way. However this unfairness remains truthful and conducive to the original intentions and objectives for which the model was originally purposed for.
 
-### **8. Conclusion and Confidence in Results:**
+### **9. Conclusion and Confidence in Results:**
 
 Except for linear regression, most of our models had a misclassification rate of below 50%, which was better than chance. Our 5-fold cross validation results showed that ridge regression was the best performing model when we left the problem as a continuous value prediction problem, and random forest was the best performing model when we reframed it into a classification problem. However, balanced accuracy score for our random forest model was not high, only averaging 0.5. This is because of the imbalanced nature of our dataset as explained above in part 5. Therefore, we are not very confident with our results because the dataset we chose to analyze was not well-collected. Hence, we would recommend further exploration of the subject matter before using our models and findings in production in an enterprise or business setting.
 
-### **9. References:**
+### **10. References:**
 
 [Predicting IPO Failures Using Machine Learning Technique](http://fmaconferences.org/SanDiego/Papers/PredictingIPOUnderpricingUsingMachineLearningTechnique.pdf)
 
