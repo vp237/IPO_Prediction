@@ -10,7 +10,6 @@ a) For continuous-value prediction: We would try to approach the problem in 2 wa
 2. Random Forest, which is, according to a research paper linked below, a more accurate model to predict the success of an IPO;
 3. Ridge Regression, which utilizes L2 loss function and L2 regularization;
 <br>
-
 b) For classification prediction:
 
 4. Logistic Regression;
