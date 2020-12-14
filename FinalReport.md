@@ -137,7 +137,7 @@ After executing our trading strategy, this is the performance of our portfolio's
 
 Figure 7: Log Returns of Portfolio
 
-This is the statistics of our portfolio's performance: 
+This is the statistics of our portfolio's performance, which does not look too bad: 
 
 [![stock-stats.jpg](https://i.postimg.cc/85Y23DJL/stock-stats.jpg)](https://postimg.cc/phDchwBd)
 
