@@ -121,7 +121,7 @@ For each day, we will rank the previous day Sharpe ratio of an individual stock.
 
 The Sharpe Ratio can be calculates as follows:
 
-[![Sharpe-Ratio.jpg](https://i.postimg.cc/VsGqxvkx/Sharpe-Ratio.jpg)](https://postimg.cc/YjFLgpgR)
+[![Sharpe-Ratio.jpg](https://i.postimg.cc/nrD8BzVC/Sharpe-Ratio.jpg)](https://postimg.cc/JHMdWRkL)
 
 We used log returns instead of raw returns in the formula because in finance, log returns tend to follow normal distribution. The risk-free rate is generally very low so We set it to 0 for simplicity.
 
