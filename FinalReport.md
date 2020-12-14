@@ -3,9 +3,9 @@
 <br>
 
 ### **1. Introduction and Description of the Problem:**
-For this project, we are trying to build several models to predict the success of IPOs according to our criterion: There is a strict increase in the stock price after the first day. The list of potential features is the very little information available to the public pre-IPO, which includes: month, day, day of the week, number of years since the company was founded, whether or not it is a US company, the sector the company is in, the industry the company is in, the CEO's age, the CEO's gender, the President's age, the President's gender, the number of years the company had been operating before going IPO, and the offering price. We will be applying what we have learned in class into our project, including missing value imputation using Gaussian Copula, feature engineering, loss function minimization, regularization, and cross validation. The 5 models that we are going to implement are:
+For this project, we were trying to build several models to predict the success of IPOs according to our criterion: There was a strict increase in the stock price after the first day. The list of potential features was the little information available to the public pre-IPO, which included: month, day, day of the week, number of years since the company was founded, whether or not it is a US company, the sector the company is in, the industry the company is in, the CEO's age, the CEO's gender, the President's age, the President's gender, the number of years the company had been operating before going IPO, and the offering price. We would be applying what we had learned in class into our project, including missing value imputation using Gaussian Copula, feature engineering, loss function minimization, regularization, and cross validation. The 5 models that we were going to implement were:
 
-a) For continuous-value prediction: We will try to approach the problem in 2 ways for these 3 models: predicting real value increase/decrease and classifying whether or not there is an increase because it is very hard to predict real continuous values considering the random nature of stock price's movement.
+a) For continuous-value prediction: We would try to approach the problem in 2 ways for these 3 models: predicting real value increase/decrease and classifying whether or not there was an increase because it is very hard to predict real continuous values considering the random nature of stock price's movement.
 1. Linear Regression, which is the most simple model and also a common one used in practice but is subject to outliers;
 2. Random Forest, which is, according to a research paper linked below, a more accurate model to predict the success of an IPO;
 3. Ridge Regression, which utilizes L2 loss function and L2 regularization;
@@ -17,9 +17,9 @@ b) For classification prediction:
 5. Support Vector Machine.
 
 
-These 5 models will help us answer the following questions: How should we approach the problem of IPO Success Prediction? How successful can we be if we try to predict real value increases/decreases? In other words, on our best real value prediction model, how far off are our predictions from the true increases/decreases? Should we use real value prediction models but turn them into classification problems instead, or will traditional classification models help achieve lower misclassification rates?
+These 5 models would help us answer the following questions: How should we approach the problem of IPO Success Prediction? How successful can we be if we try to predict real value increases/decreases? In other words, on our best real value prediction model, how far off are our predictions from the true increases/decreases? Should we use real value prediction models but turn them into classification problems instead, or will traditional classification models help achieve lower misclassification rates?
 
-As our final stretch, we do not want to waste the price data for the whole year, so we will be using the data for portfolio allocation and trading strategy. In the end, we will check our daily log returns of the portfolio after 262 days of trading.
+As our final stretch, we did not want to waste the price data for the whole year, so we would be using the data for portfolio allocation and trading strategy. In the end, we would check our daily log returns of the portfolio after 262 days of trading.
 
 ### **2. The Dataset:**
 
