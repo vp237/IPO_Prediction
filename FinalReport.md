@@ -56,6 +56,8 @@ Figure 1: Correlation Matrix
 
 For feature engineering, we chose to transform several nominal features. Since CEOGender, PresidentGender, Industry and Sector are categorical data, we used one-hot-encoding in order to include them in the linear model.
 
+We then randomly split our data into train set (70% of the data) and test set (30% of the data).
+
 ### a) <ins>Linear Regression</ins>
 
 Linear Regression was first attempted to predict a continuous value for the increase/decrease of the post-IPO stock at closing of day 0.  
@@ -90,17 +92,17 @@ We also attempted Ridge Regression because it takes into account L2 regularizati
 
 Figure 4: Ridge Regression Model (Initial Run)
 
-For the continuous value prediction problem, Ridge Regression produced a MAE of 231.9012842889374, which was lower than Linear Regression but higher than Random Forest.
+For the continuous value prediction problem, on its initial run, Ridge Regression produced a MAE of 231.9012842889374, which was lower than Linear Regression but higher than Random Forest.
 
 Additionally, for classification, Ridge Regression had a misclassification rate of 0.5677179962894249. The balanced accuracy, on the other hand, was 0.5677179962894249. 
 
 ### d) <ins>Support Vector Machines</ins>
 
-In order to further explore the classification problem, we decided to run SVM. SVM produced a misclassification rate of 0.20037105751391465 and a balanced accuracy score of 0.5.
+In order to further explore the classification problem, we decided to run SVM. SVM produced a misclassification rate of 0.20037105751391465 and a balanced accuracy score of 0.5 for initial run.
 
 ### e) <ins>Logistic Regression</ins>
 
-Finally, we also used Logistic Regression. The logistic model had a misclassification rate of 0.20593692022263452 and a balanced accuracy score of 0.49998925839993125. 
+Finally, we also used Logistic Regression. The logistic model had a misclassification rate of 0.20593692022263452 and a balanced accuracy score of 0.49998925839993125 for initial run. 
 
 ### **6. Testing for Model Effectiveness and Cross Validation**
 
