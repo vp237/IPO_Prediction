@@ -112,7 +112,7 @@ Five fold cross validation was performed in order to prevent overfitting. The re
 
 | Model | MAE | Misclassification Rate | Balanced Accuracy |
 |-|-|-|-|
-| Linear | 7227.41 ± 28151.27 | 0.3931 ± 0.0303 | 0.4771 ± 0.0836 |
+| Linear Regression | 7227.41 ± 28151.27 | 0.3931 ± 0.0303 | 0.4771 ± 0.0836 |
 | Random Forest | 7623.82 ± 30373.92 | 0.2093 ± 0.0078 | 0.5 ± 0.0 |
 | Ridge | 3033.16 ± 11325.28 | 0.3669 ± 0.0453 | 0.5062 ± 0.0456 |
 | SVM | - | 0.2166 ± 0.0146 | 0.4996 ± 0.0004 |
