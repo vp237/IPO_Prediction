@@ -38,7 +38,11 @@ The IPO dataset consists of 3762 rows and 1664 columns. Each row corresponds to 
 
 ### **3. Feature Selection:**
 
-The features used were ‘Month’, ‘Day'’, ‘dayOfWeek’, ‘yearDifference’, ‘CEOAge’, ‘PresidentAge’, ‘openDay0’, ‘CEOGender’, ‘PresidentGender’, ‘Industry’ and ‘Sector’. We chose these features because they were the only information that was available to the public pre-IPO. According to an expert we consulted, IPO's stock price could be very cyclical, hence we chose to include features such as ‘Month’, ‘Day'’, ‘dayOfWeek’. We also thought that investors would be more eager to invest in the company if they knew that the company's CEO and President were of old age, which might indicate how experienced the management team was and how long they had been in the field. We thought that the CEO and President's genders might also be important since until the present day, women leaders are still not as highly regarded as male leaders. The industry and sector would also be crucial in predicting the stock price because investors would tend to be more bullish to some industries and sectors than others. Finally, the market might show a keener interest in companies that had been around for while before going IPO because there would be more information about the company on the news compared to newly founded startups, hence we chose ‘yearDifference’ as one of our features. Below is a coefficient matrix for numerical features. From the matrix, we could see that most features yielded correlation coefficients different from 0.
+The features used were ‘Month’, ‘Day'’, ‘dayOfWeek’, ‘yearDifference’, ‘CEOAge’, ‘PresidentAge’, ‘openDay0’, ‘CEOGender’, ‘PresidentGender’, ‘Industry’ and ‘Sector’. We chose these features because they were the only information that was available to the public pre-IPO. According to an expert we consulted, IPO's stock price could be very cyclical, hence we chose to include features such as ‘Month’, ‘Day'’, ‘dayOfWeek’. We also thought that investors would be more eager to invest in the company if they knew that the company's CEO and President were of old age, which might indicate how experienced the management team was and how long they had been in the field. We thought that the CEO and President's genders might also be important since until the present day, women leaders are still not as highly regarded as male leaders. The industry and sector would also be crucial in predicting the stock price because investors would tend to be more bullish to some industries and sectors than others. Finally, the market might show a keener interest in companies that had been around for while before going IPO because there would be more information about the company on the news compared to newly founded startups, hence we chose ‘yearDifference’ as one of our features. Below is a coefficient matrix for numerical features. 
+
+[![correlation-matrix.jpg](https://i.postimg.cc/W4Z2cTJm/correlation-matrix.jpg)](https://postimg.cc/TyR8r80h)
+
+Figure 1: Correlation Matrix
 
 ### **4. Data Cleaning:**
 Below is our process of cleaning the dataset:
@@ -60,7 +64,8 @@ For feature engineering, we chose to transform several nominal features. Since C
 Initial running of the linear regression model resulted in an MAE of 339.7852468493644. 
 
 [![download.png](https://i.postimg.cc/50hL9fPN/download.png)](https://postimg.cc/7GNfmr8p)
-Figure 1: Linear Regression Model (Initial Run)
+
+Figure 2: Linear Regression Model (Initial Run)
 
 From the results above, it can be interpreted that regression might be too challenging with our current amount of data. This led us to think - would our model perform better if we only considered whether the price had gone up or down? We could therefore reframe the problem into one of classification, where we would try to predict an increase or decrease in the stock price post-opening rather than a continuous value. 
 
@@ -71,7 +76,8 @@ A new dataframe was thus created with the predictions and actual values, as well
 According to a research paper that was trying to predict the failures of IPO, random forest regression might perform better compared to linear regression in terms of predicting the closing price of the first day. We performed random forest regression with feature engineering with a very similar approach to linear regression. As for our parameters, we chose n_estimators (the number of trees in the forest) of 1000 and random_state of 42. However, the initial run had an MAE value of 49.10111234383177, which was a very good result compared to linear regression.
 
 [![download-1.png](https://i.postimg.cc/8kLtFYLn/download-1.png)](https://postimg.cc/F1sj8DWj)
-Figure 2: Random Forest Model (Initial Run)
+
+Figure 3: Random Forest Model (Initial Run)
 
 However, if we instead re-frame this problem as a classification problem for increases/decreases in price (as done above for Linear Regression), the results improve dramatically. The misclassification rate for such a problem was 0.2152133580705009, far lower than that of Linear Regression. Finally, the balanced accuracy score was 0.5.
 
@@ -80,7 +86,8 @@ However, if we instead re-frame this problem as a classification problem for inc
 We also attempted Ridge Regression. 
 
 [![download-2.png](https://i.postimg.cc/L8q3kQrP/download-2.png)](https://postimg.cc/gxWhmscc)
-Figure 3: Ridge Regression Model (Initial Run)
+
+Figure 4: Ridge Regression Model (Initial Run)
 
 For the continuous value prediction problem, Ridge Regression produced a MAE of 231.9012842889374, which is lower than Linear Regression but higher than Random Forest.
 
@@ -129,19 +136,19 @@ Below are the log returns of the 10 stocks we picked:
 
 [![portfolio.jpg](https://i.postimg.cc/prZDrVfF/portfolio.jpg)](https://postimg.cc/SYnXthtS)
 
-Figure 6: Log Returns of Stocks
+Figure 5: Log Returns of Stocks
 
 After executing our trading strategy, this is the performance of our portfolio's log returns after 262 trading days:
 
 [![stock.jpg](https://i.postimg.cc/gcSjz6RK/stock.jpg)](https://postimg.cc/c630TCFK)
 
-Figure 7: Log Returns of Portfolio
+Figure 6: Log Returns of Portfolio
 
 This is the statistics of our portfolio's performance, which does not look too bad: 
 
 [![stock-stats.jpg](https://i.postimg.cc/85Y23DJL/stock-stats.jpg)](https://postimg.cc/phDchwBd)
 
-Figure 8: Statistics of Portfolio's Log Returns
+Figure 7: Statistics of Portfolio's Log Returns
 
 ### **7. Discussion on Weapon of Math Destruction and Fairness:**
 
