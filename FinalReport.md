@@ -80,7 +80,7 @@ According to a research paper that was trying to predict the failures of IPO, ra
 
 Figure 3: Random Forest Model (Initial Run)
 
-However, if we instead re-frame this problem as a classification problem for increases/decreases in price (as done above for Linear Regression), the results improve dramatically. The misclassification rate for such a problem was 0.2152133580705009, far lower than that of Linear Regression. Finally, the balanced accuracy score was 0.5.
+However, if we instead reframed this problem as a classification problem for increases/decreases in price (as done above for Linear Regression), the results improved dramatically. The misclassification rate for such a problem was 0.2152133580705009, far lower than that of Linear Regression. Finally, the balanced accuracy score was 0.5.
 
 ### c) <ins>Ridge Regression</ins>
 
