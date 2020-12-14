@@ -56,7 +56,7 @@ Below is our process of cleaning the dataset:
 
 ### a) <ins>Linear Regression</ins>
 
-Linear Regression was first attempted to predict a continuous value for the price of the post-IPO stock at closing of day 0. In this case, we were trying to predict the closing price of the stock at day 0. 
+Linear Regression was first attempted to predict a continuous value for the increase/decrease of the post-IPO stock at closing of day 0. 
 
 For feature engineering, we chose to transform several nominal features. Since CEOGender, PresidentGender, Industry and Sector are categorical data, we used one-hot-encoding in order to include them in the linear model. 
 
@@ -90,7 +90,7 @@ We also attempted Ridge Regression.
 
 Figure 4: Ridge Regression Model (Initial Run)
 
-For the continuous value prediction problem, Ridge Regression produced a MAE of 231.9012842889374, which is lower than Linear Regression but higher than Random Forest.
+For the continuous value prediction problem, Ridge Regression produced a MAE of 231.9012842889374, which was lower than Linear Regression but higher than Random Forest.
 
 Additionally, for classification, Ridge Regression had a misclassification rate of 0.5677179962894249. The balanced accuracy, on the other hand, was 0.5677179962894249. 
 
@@ -104,7 +104,7 @@ Finally, we also used Logistic Regression. The logistic model had a misclassific
 
 ### **6. Testing for Model Effectiveness and Cross Validation**
 
-Testing for efficiency and avoiding underfitting/overfitting: For the classification models, we used misclassification rate and balanced accuracy score as a means to test for our model's effectiveness. We chose to use balanced accuracy score here because our classes are imbalanced: for most of our data (around 80% of the stocks), the stock price increased after the first day. For the continuous-value prediction models, we used Mean Absolute Error (MAE) as a means to test for our model's effectiveness when predicting continous values, and misclassification rate and balanced accuracy score after we changed our problem into a classification problem. 
+Testing for efficiency and avoiding underfitting/overfitting: For the classification models, we used misclassification rate and balanced accuracy score as a means to test for our model's effectiveness. We chose to use balanced accuracy score here because our classes were imbalanced: for most of our data (around 80% of the stocks), the stock price increased after the first day. For the continuous-value prediction models, we used Mean Absolute Error (MAE) as a means to test for our model's effectiveness when predicting continous values, and misclassification rate and balanced accuracy score after we changed our problem into a classification problem. 
 
 In order to avoid overfitting/underfitting, we would also be performing 5-fold cross validation and look at the MAEs across the board for the first 3 models and the misclassification rates and balanced accuracy scores for all 5 models.
 
@@ -119,7 +119,7 @@ Five fold cross validation was performed in order to prevent overfitting. The re
 | Logistic | - | 0.2205 ± 0.0302 | 0.4988 ± 0.0012 |
 <br>
 
-As can be observed from the above, the model that performed best for predicting continuous values was Ridge Regression, as MAE was lowest. However, for the classification problem, the best performing model was Random Forest, with a misclassification rate of 0.2093.
+As can be observed from the above, the model that performed best for predicting continuous values was Ridge Regression, as average MAE was lowest. However, for the classification problem, the best performing model was Random Forest, with an average misclassification rate of 0.2093.
 
 ### **7. Trading Strategy:**
 
