@@ -123,7 +123,7 @@ The Sharpe Ratio can be calculates as follows:
 
 [![Sharpe-Ratio.jpg](https://i.postimg.cc/nrD8BzVC/Sharpe-Ratio.jpg)](https://postimg.cc/JHMdWRkL)
 
-We used log returns instead of raw returns in the formula because in finance, log returns tend to follow normal distribution. The risk-free rate is generally very low so We set it to 0 for simplicity.
+We used log returns instead of raw returns in the formula because in finance, log returns tend to follow normal distribution. The risk-free rate is generally very low so we set it to 0 for simplicity.
 
 Below are the log returns of the 10 stocks we picked:
 
