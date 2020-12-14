@@ -64,7 +64,7 @@ We were trying to predict the Price Difference in the open price and close price
 
 [![hist.jpg](https://i.postimg.cc/g2Tdn9kn/hist.jpg)](https://postimg.cc/HrXFhhMg)
 
-Figure 3.
+Figure 4. Histogram of Price Difference
 
 As seen from our histogram, the price difference is very small, only varying slightly from 0 to 1. 
 
@@ -91,7 +91,7 @@ Initial running of the linear regression model resulted in an MAE of 339.7852468
 
 [![download.png](https://i.postimg.cc/50hL9fPN/download.png)](https://postimg.cc/7GNfmr8p)
 
-Figure 2: Linear Regression Model (Initial Run)
+Figure 5: Linear Regression Model (Initial Run)
 
 For the readers' convenience, we had drawn the line y=x in the graph. The points lying on the line would be the ones that had their values correctly predicted, above the line would be the ones that had their values overpredicted, and below the line would be the ones that had their values underpredicted. From the graph, we could see that most of the values were overpredicted.
 
@@ -105,7 +105,7 @@ According to a research paper that was trying to predict the failures of IPO, ra
 
 [![download-1.png](https://i.postimg.cc/8kLtFYLn/download-1.png)](https://postimg.cc/F1sj8DWj)
 
-Figure 3: Random Forest Model (Initial Run)
+Figure 6: Random Forest Model (Initial Run)
 
 However, if we instead reframed this problem as a classification problem for increases/decreases in price (as done above for Linear Regression), the results improved dramatically. The misclassification rate for such a problem was 0.2152133580705009, far lower than that of Linear Regression. Finally, the balanced accuracy score was 0.5.
 
@@ -115,7 +115,7 @@ We also attempted Ridge Regression because it takes into account L2 regularizati
 
 [![download-2.png](https://i.postimg.cc/L8q3kQrP/download-2.png)](https://postimg.cc/gxWhmscc)
 
-Figure 4: Ridge Regression Model (Initial Run)
+Figure 7: Ridge Regression Model (Initial Run)
 
 For the continuous value prediction problem, on its initial run, Ridge Regression produced a MAE of 231.9012842889374, which was lower than Linear Regression but higher than Random Forest.
 
@@ -164,19 +164,19 @@ Below are the log returns of the 10 stocks we picked:
 
 [![stock.jpg](https://i.postimg.cc/HkYssybs/stock.jpg)](https://postimg.cc/vcKd0DPp)
 
-Figure 5: Log Returns of Stocks
+Figure 8: Log Returns of Stocks
 
 After executing our trading strategy, this is the performance of our portfolio's log returns after 262 trading days:
 
 [![portfolio.jpg](https://i.postimg.cc/FFb4dKrf/portfolio.jpg)](https://postimg.cc/ThPSBfWG)
 
-Figure 6: Log Returns of Portfolio
+Figure 9: Log Returns of Portfolio
 
 This is the statistics of our portfolio's performance, which does not look too bad: 
 
 [![stock-stats.jpg](https://i.postimg.cc/pXqMC1nR/stock-stats.jpg)](https://postimg.cc/vcgKHhzN)
 
-Figure 7: Statistics of Portfolio's Log Returns 
+Figure 10: Statistics of Portfolio's Log Returns 
 
 ### **9. Discussion on Weapon of Math Destruction and Fairness:**
 
