@@ -35,15 +35,7 @@ The IPO dataset consists of 3762 rows and 1664 columns. Each row corresponds to 
 - Financial data of the company after it went IPO
 <!-- list end-->
 
-### **3. Feature Selection:**
-
-The features used were ‘Month’, ‘Day'’, ‘dayOfWeek’, ‘yearDifference’, ‘CEOAge’, ‘PresidentAge’, ‘openDay0’, ‘CEOGender’, ‘PresidentGender’, ‘Industry’ and ‘Sector’. We chose these features because they were the only information that was available to the public pre-IPO. According to an expert we consulted, IPO's stock price could be very cyclical, hence we chose to include features such as ‘Month’, ‘Day'’, ‘dayOfWeek’. We also thought that investors would be more eager to invest in the company if they knew that the company's CEO and President were of old age, which might indicate how experienced the management team was and how long they had been in the field. We thought that the CEO and President's genders might also be important since until the present day, women leaders are still not as highly regarded as male leaders. The industry and sector would also be crucial in predicting the stock price because investors would tend to be more bullish to some industries and sectors than others. Finally, the market might show a keener interest in companies that had been around for while before going IPO because there would be more information about the company on the news compared to newly founded startups, hence we chose ‘yearDifference’ as one of our features. Below is a coefficient matrix for ordinal features. 
-
-[![correlation-matrix.jpg](https://i.postimg.cc/W4Z2cTJm/correlation-matrix.jpg)](https://postimg.cc/TyR8r80h)
-
-Figure 1: Correlation Matrix
-
-### **4. Data Cleaning:**
+### **3. Data Cleaning:**
 Below is our process of cleaning the dataset:
 <ol> 
 <li> We first dropped all the columns that contain the financial data of the company post-IPO (which accounted for a large proportion of the dataset) because they would be unusable since we were trying to predict the company's stock price pre-IPO.
@@ -51,6 +43,14 @@ Below is our process of cleaning the dataset:
 <li> We then dropped all rows that contained blank values for the other columns. </li>
 <li> Finally, we removed negative values from the YearDifference column. </li>
 </ol>
+
+### **4. Feature Selection:**
+
+The features used were ‘Month’, ‘Day'’, ‘dayOfWeek’, ‘yearDifference’, ‘CEOAge’, ‘PresidentAge’, ‘openDay0’, ‘CEOGender’, ‘PresidentGender’, ‘Industry’ and ‘Sector’. We chose these features because they were the only information that was available to the public pre-IPO. According to an expert we consulted, IPO's stock price could be very cyclical, hence we chose to include features such as ‘Month’, ‘Day'’, ‘dayOfWeek’. We also thought that investors would be more eager to invest in the company if they knew that the company's CEO and President were of old age, which might indicate how experienced the management team was and how long they had been in the field. We thought that the CEO and President's genders might also be important since until the present day, women leaders are still not as highly regarded as male leaders. The industry and sector would also be crucial in predicting the stock price because investors would tend to be more bullish to some industries and sectors than others. Finally, the market might show a keener interest in companies that had been around for while before going IPO because there would be more information about the company on the news compared to newly founded startups, hence we chose ‘yearDifference’ as one of our features. Below is a coefficient matrix for ordinal features after we imputed missing values. 
+
+[![correlation-matrix.jpg](https://i.postimg.cc/W4Z2cTJm/correlation-matrix.jpg)](https://postimg.cc/TyR8r80h)
+
+Figure 1: Correlation Matrix
 
 ### **5. Models Used:**
 
