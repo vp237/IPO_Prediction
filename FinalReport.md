@@ -58,13 +58,15 @@ Below is our process of cleaning the dataset:
 
 Linear Regression was first attempted to predict a continuous value for the price of the post-IPO stock at closing of day 0. In this case, we were trying to predict the closing price of the stock at day 0. 
 
-For feature engineering, we chose to transform several nominal features. Since CEOGender, PresidentGender, Industry and Sector are categorical data, we used one-hot-encoding in order to include them in the linear model. Our resulting matrix therefore included 1147 rows and 141 columns.
+For feature engineering, we chose to transform several nominal features. Since CEOGender, PresidentGender, Industry and Sector are categorical data, we used one-hot-encoding in order to include them in the linear model. 
 
 Initial running of the linear regression model resulted in an MAE of 339.7852468493644. 
 
 [![download.png](https://i.postimg.cc/50hL9fPN/download.png)](https://postimg.cc/7GNfmr8p)
 
 Figure 2: Linear Regression Model (Initial Run)
+
+For the readers' convenience, we had drawn the line y=x in the graph. The points lying on the line would be the ones that had their values correctly predicted, above the line would be the ones that had their values overpredicted, and below the line would be the ones that had their values underpredicted. From the graph, we could see that most of the values were overpredicted.
 
 From the results above, it can be interpreted that regression might be too challenging with our current amount of data. This led us to think - would our model perform better if we only considered whether the price had gone up or down? We could therefore reframe the problem into one of classification, where we would try to predict an increase or decrease in the stock price post-opening rather than a continuous value. 
 
