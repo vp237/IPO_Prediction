@@ -36,23 +36,39 @@ The IPO dataset consists of 3762 rows and 1664 columns. Each row corresponds to 
 - Financial data of the company after it went IPO
 <!-- list end-->
 
-### **3. Data Descriptive Statistics and Visualizations:**
+### **3. Feature Selection:**
 
-[![P1.jpg](https://i.postimg.cc/GpCLnJyD/P1.jpg)](https://postimg.cc/FYT5jSGF)
+The features used were ‘Month’, ‘Day'’, ‘dayOfWeek’, ‘yearDifference’, 'employees', ‘CEOAge’, ‘PresidentAge’, ‘openDay0’, ‘CEOGender’, ‘PresidentGender’, ‘Industry’ and ‘Sector’. We chose these features because they were the only information that was available to the public pre-IPO. According to an expert we consulted, IPO's stock price could be very cyclical, hence we chose to include features such as ‘Month’, ‘Day'’, ‘dayOfWeek’. We reckoned that investors might be interested in the size of the company, which could be reflected from the number of employees. We also thought that investors would be more eager to invest in the company if they knew that the company's CEO and President were of old age, which might indicate how experienced the management team was and how long they had been in the field. We thought that the CEO and President's genders might also be important since until the present day, women leaders are still not as highly regarded as male leaders. The industry and sector would also be crucial in predicting the stock price because investors would tend to be more bullish to some industries and sectors than others. Finally, the market might show a keener interest in companies that had been around for while before going IPO because there would be more information about the company on the news compared to newly founded startups, hence we chose ‘yearDifference’ as one of our features. Below is a coefficient matrix for ordinal and continuous features after we imputed missing values. 
 
-This figure shows the statistics of the closing prices over day ranges 0-261 for each company (shown for companies 0-4). From the description of the data above, we can see that some companies have prices that fluctuate with wide ranges. For example, company 16 has a standard deviation of 7003.72 while company 3729 has a standard deviation of 2.224712 * 10<sup>-14</sup>, nearly 0. Every company has different trends in their closing prices in the IPO. Here is a visual representation of their varying closing prices:
+[![correlation-matrix.jpg](https://i.postimg.cc/TYQfssmt/correlation-matrix.jpg)](https://postimg.cc/GHBW8qXD)
 
-[![P2.jpg](https://i.postimg.cc/3wYTc8sC/P2.jpg)](https://postimg.cc/yDQtJHYk)
+Figure 1: Correlation Matrix
 
-This histogram of the YearDifference shows the frequency of the number of years the company was private before appearing in the IPO. We can see that most were private for only a small number of years, mainly 0, before appearing in the IPO. There are few that remained public for a large number of years before going IPO. 
+### **4. Data Descriptive Statistics and Visualizations:**
+
+We generated some visualizations to understand more about some of our key predictors. 
+
+This histogram of the YearDifference shows the frequency of the number of years the company was private before appearing in the IPO. We can see that most were private for only a small number of years, before going IPO. There are few that stayed private for a large number of years before going IPO. 
 
 [![P4.jpg](https://i.postimg.cc/Qxv55P2r/P4.jpg)](https://postimg.cc/7fMfrBPB)
+
+Figure 2. Histogram of Year Difference
 
 This is a histogram of the sectors that each company belongs to. There is a good variety of them all but the market is dominated by finance, healthcare and consumer services sector.  
 
 [![P3.jpg](https://i.postimg.cc/pr2Cw72S/P3.jpg)](https://postimg.cc/qh52n16c)
 
-### **4. Data Cleaning:**
+Figure 3. Histogram of Sectors
+
+We were trying to predict the Price Difference in the open price and close price of Day 0, and the distribution is as follows:
+
+[![hist.jpg](https://i.postimg.cc/g2Tdn9kn/hist.jpg)](https://postimg.cc/HrXFhhMg)
+
+Figure 3.
+
+As seen from our histogram, the price difference is very small, only varying slightly from 0 to 1. 
+
+### **5. Data Cleaning:**
 Below is our process of cleaning the dataset:
 <ol> 
 <li> We first dropped all the columns that contain the financial data of the company post-IPO (which accounted for a large proportion of the dataset) because they would be unusable since we were trying to predict the company's stock price pre-IPO.
@@ -60,14 +76,6 @@ Below is our process of cleaning the dataset:
 <li> We then dropped all rows that contained blank values for the other columns. </li>
 <li> Finally, we removed negative values from the YearDifference column because those data did not make sense since the company could not go IPO before it was founded. </li>
 </ol>
-
-### **5. Feature Selection:**
-
-The features used were ‘Month’, ‘Day'’, ‘dayOfWeek’, ‘yearDifference’, 'employees', ‘CEOAge’, ‘PresidentAge’, ‘openDay0’, ‘CEOGender’, ‘PresidentGender’, ‘Industry’ and ‘Sector’. We chose these features because they were the only information that was available to the public pre-IPO. According to an expert we consulted, IPO's stock price could be very cyclical, hence we chose to include features such as ‘Month’, ‘Day'’, ‘dayOfWeek’. We reckoned that investors might be interested in the size of the company, which could be reflected from the number of employees. We also thought that investors would be more eager to invest in the company if they knew that the company's CEO and President were of old age, which might indicate how experienced the management team was and how long they had been in the field. We thought that the CEO and President's genders might also be important since until the present day, women leaders are still not as highly regarded as male leaders. The industry and sector would also be crucial in predicting the stock price because investors would tend to be more bullish to some industries and sectors than others. Finally, the market might show a keener interest in companies that had been around for while before going IPO because there would be more information about the company on the news compared to newly founded startups, hence we chose ‘yearDifference’ as one of our features. Below is a coefficient matrix for ordinal and continuous features after we imputed missing values. 
-
-[![correlation-matrix.jpg](https://i.postimg.cc/TYQfssmt/correlation-matrix.jpg)](https://postimg.cc/GHBW8qXD)
-
-Figure 1: Correlation Matrix
 
 ### **6. Models Used:**
 
