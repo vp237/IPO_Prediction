@@ -184,9 +184,9 @@ This is the statistics of our portfolio's performance, which does not look too b
 
 [![stock-stats.jpg](https://i.postimg.cc/pXqMC1nR/stock-stats.jpg)](https://postimg.cc/vcgKHhzN)
 
-Figure 11: Statistics of Portfolio's Log Returns 
+Figure 11: Statistics of Portfolio's Daily Log Returns 
 
-Our models, in this case, indeed helped us pick the stocks that helped our portfolio generate positive log returns.
+Our models, in this case, indeed helped us pick the stocks that helped our portfolio generate daily positive log returns.
 
 ### **9. Discussion on Weapon of Math Destruction and Fairness:**
 
