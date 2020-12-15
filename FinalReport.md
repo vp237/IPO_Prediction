@@ -186,7 +186,7 @@ This is the statistics of our portfolio's performance, which does not look too b
 
 Figure 11: Statistics of Portfolio's Log Returns 
 
-Our models, in this case, indeed helped us pick the ones that helped our portfolio generate positive log returns.
+Our models, in this case, indeed helped us pick the stocks that helped our portfolio generate positive log returns.
 
 ### **9. Discussion on Weapon of Math Destruction and Fairness:**
 
