@@ -172,6 +172,8 @@ Below are the log returns of the 10 stocks we picked:
 
 Figure 9: Log Returns of Stocks
 
+From the figure, we can see that the log returns of these stocks indeed follow normal distribution.
+
 After executing our trading strategy, this is the performance of our portfolio's log returns after 262 trading days:
 
 [![portfolio.jpg](https://i.postimg.cc/FFb4dKrf/portfolio.jpg)](https://postimg.cc/ThPSBfWG)
