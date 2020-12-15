@@ -178,7 +178,7 @@ After executing our trading strategy, this is the performance of our portfolio's
 
 [![portfolio.jpg](https://i.postimg.cc/FFb4dKrf/portfolio.jpg)](https://postimg.cc/ThPSBfWG)
 
-Figure 10: Log Returns of Portfolio
+Figure 10: Daily Log Returns of Portfolio
 
 This is the statistics of our portfolio's performance, which does not look too bad: 
 
