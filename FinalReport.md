@@ -99,11 +99,9 @@ Initial running of the linear regression model resulted in an MAE of 339.7852468
 
 Figure 6: Linear Regression Model (Initial Run)
 
-For the readers' convenience, we had drawn the line y=x in the graph. The points lying on the line would be the ones that had their values correctly predicted, above the line would be the ones that had their values overpredicted, and below the line would be the ones that had their values underpredicted. From the graph, we could see that most of the values were overpredicted.
-
 From the results above, it can be interpreted that regression might be too challenging with our current amount of data. This led us to think - would our models perform better if we only considered whether the price had gone up or down? We could therefore reframe the problem into one of classification, where we would try to predict an increase or decrease in the stock price post-opening rather than a continuous value. 
 
-A new dataframe was thus created with the predicted and actual difference between open and close prices for Day 0. The result would be "correctly classified" if the product of the predicted value and the true value was greater than 0, meaning that the values moved in the same direction. This resulted in a misclassification rate of 0.5797101449275363. We also noticed that a large portion of the values predicted were higher than the true values, which was reflected in the above graph as well.
+A new dataframe was thus created with the predicted and actual difference between open and close prices for Day 0. The result would be "correctly classified" if the product of the predicted value and the true value was greater than 0, meaning that the values moved in the same direction. This resulted in a misclassification rate of 0.5797101449275363. We also noticed that a large portion of the values predicted were higher than the true values.
 
 ### b) <ins>Random Forest</ins>
 
